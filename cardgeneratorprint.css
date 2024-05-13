@@ -1,0 +1,38 @@
+.card {
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border: 1px solid black;
+	width: 2.5in;
+	height: 3.5in;
+	text-align: center;
+	justify: center;
+}
+
+.subsection {
+	text-align: center;
+	display: block;
+	border: 1px solid black;
+	margin: 2%;
+	height: auto;
+	width: auto;
+}
+
+.subsection1 {
+	font-weight: bold;
+	height: 13%;
+}
+
+.subsection2 {
+	height: 50%;
+}
+
+.subsection3 {
+	font-style: italic;
+	height: 25%;
+}
+
+@media print {
+	body { visibility: hidden; }
+	#cards *{ visibility: visible; }
+}
