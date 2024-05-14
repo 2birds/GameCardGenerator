@@ -10,8 +10,9 @@
 }
 
 .subsection {
-	text-align: center;
-	display: block;
+	justify-content: center;
+	align-items: center;
+	display: flex;
 	border: 1px solid black;
 	margin: 2%;
 	height: auto;
@@ -30,9 +31,4 @@
 .subsection3 {
 	font-style: italic;
 	height: 25%;
-}
-
-@media print {
-	body { visibility: hidden; }
-	#cards *{ visibility: visible; }
 }

@@ -1,18 +1,21 @@
+form * { display: none; }
+
 .card {
 	float: left;
 	margin-right: 5px;
 	margin-bottom: 5px;
-	border: 1px solid black;
-	width: 2.5in;
-	height: 3.5in;
+	border: 1px solid black !important;
+	width: 2.5in !important;
+	height: 3.5in !important;
 	text-align: center;
 	justify: center;
 }
 
 .subsection {
-	text-align: center;
-	display: block;
-	border: 1px solid black;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	border: 1px solid black !important;
 	margin: 2%;
 	height: auto;
 	width: auto;
@@ -30,9 +33,4 @@
 .subsection3 {
 	font-style: italic;
 	height: 25%;
-}
-
-@media print {
-	body { visibility: hidden; }
-	#cards *{ visibility: visible; }
 }
