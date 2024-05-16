@@ -1,3 +1,7 @@
+form {
+	display: grid;
+}
+
 .card {
 	float: left;
 	margin-right: 5px;
