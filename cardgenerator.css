@@ -16,6 +16,7 @@ label {
 
 .subsection {
 	justify-content: center;
+	background-color: white;
 	align-items: center;
 	display: flex;
 	border: 1px solid black;

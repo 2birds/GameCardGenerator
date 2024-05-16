@@ -11,11 +11,13 @@ function makeCardSubsection(text, classname) {
 	return subsection;
 }
 
-function makeCardElement(topText, midText, bottomText) {
+function makeCardElement(topText, midText, bottomText, bgColor) {
 	var cardElem = document.createElement("div");
 	var classAttr = document.createAttribute("class");
 	classAttr.value = "card";
 	cardElem.setAttributeNode(classAttr);
+
+	cardElem.style.backgroundColor = bgColor;
 
 	cardElem.appendChild(makeCardSubsection(topText, "subsection1"));
 
@@ -37,6 +39,8 @@ function makeCardElement(topText, midText, bottomText) {
 function makeCard(event)
 {
 	event.preventDefault();
+	var bgColor = document.getElementById("bgcolor");
+	console.log("bgcolor = " + bgColor.value);
   var topText = document.getElementById("toptext");
 	console.log(document.getElementById("toptext").value);
   var midText = document.getElementById("middletext");
@@ -44,7 +48,7 @@ function makeCard(event)
 
 	let cards = document.getElementById("cards");
 
-	cards.appendChild(makeCardElement(topText.value, midText.value, bottomText.value));
+	cards.appendChild(makeCardElement(topText.value, midText.value, bottomText.value, bgColor.value));
 
 	topText.value = "";
 	midText.value = "";
