@@ -55,7 +55,20 @@ function makeCard(event)
 	bottomText.value = "";
 }
 
+function delLast(event)
+{
+	event.preventDefault();
+	let cards = document.getElementById("cards");
+	let nCards = cards.children.length;
+	if (nCards > 0)
+	{
+		cards.children[nCards-1].remove();
+	}
+}
+
 window.onload = ()=>{
 	let button = document.getElementById("submitbutton");
 	button.addEventListener("click", makeCard);
+	let delbutton = document.getElementById("deletelastbutton");
+	delbutton.addEventListener("click", delLast);
 };
